@@ -7,9 +7,9 @@ class Funcionarios
     public function __construct()
     {
         $this->funcionarios = [
-            ['id' => 4, 'nome' => 'João', 'salario' => 1500],
-            ['id' => 21, 'nome' => 'Jose', 'salario' => 1230.50],
-            ['id' => 34, 'nome' => 'Maria', 'salario' => 1678.54]
+            ['id' => 4, 'nome' => 'João', 'salario' => 1500, 'cpf' => '15668798735'],
+            ['id' => 21, 'nome' => 'Jose', 'salario' => 1230.50, 'cpf' => '15668798789'],
+            ['id' => 34, 'nome' => 'Maria', 'salario' => 1678.54, 'cpf' => '15668798768']
         ];
     }
 
@@ -18,16 +18,16 @@ class Funcionarios
         return $this->funcionarios;
     }
 
-    public function find($id)
+    public function find($cpf)
     {
         foreach($this->funcionarios as $func)
-    {
-        if($func['id'] == $id)
         {
-            return $func;
-        }
-    }
-    return null;     
+            if($func['cpf'] == $cpf)
+            {
+                return $func;
+            }
+         }
+        return null;     
     }
 }
 

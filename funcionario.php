@@ -3,12 +3,12 @@
 include('Calculadora.php');
 include('Funcionarios.php');
 
-$id = $_POST['id'];
+$cpf = $_POST['cpf'];
 
 $calculador = new Calculadora();
 $funcionarios = new Funcionarios();
 
-$func = $funcionarios->find($id);
+$func = $funcionarios->find($cpf);
 
 echo $func['nome'];
 ?>

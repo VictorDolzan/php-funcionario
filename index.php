@@ -8,7 +8,7 @@
 </head>
 <body>
 <form action="funcionario.php" method="POST">
-        <input name="id" type="number" placeholder="Id Funcionario">
+        <input name="cpf" type="text" placeholder="CPF Funcionario">
         <button type="submit">Procurar</button>
     </form>
 </body>
